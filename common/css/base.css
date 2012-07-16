@@ -1,0 +1,458 @@
+/* -----タグ基本設定 -----*/
+html {
+	height: 100%;
+}
+html {
+	overflow-y:scroll;  
+}
+body, div, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, blockquote, pre, form, input, textarea, table, td, th {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	height: 100%;
+}
+img, table {
+	border: none;
+}
+ol, ul {
+	list-style: none;
+}
+ul li img {
+	vertical-align: bottom;
+}
+
+/* -----フォント基本設定----- */
+
+body {
+	color: #333333;
+	font-family:"ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3", sans-serif;
+	font-size: 13px;
+}
+h1, h2, h3, h4, h5, h6 ,th {
+	font-size: 100%;
+	font-weight: normal;
+}
+address, em {
+	font-style: normal;
+}
+/* IE6以前用基本フォント（MacIE5除く）*/
+/*\*/
+* html body {
+	font-size: 82%;
+}
+/**/
+
+/* IE7用基本フォント*/
+/*\*/
+*:first-child + html body {
+	font-size: 82%;
+}
+/**/
+
+/* -----テキストリンク設定----- */
+
+a:link {
+	color: #3C4E87;
+}
+a:visited {
+	color: #3C4E87;
+}
+a:hover {
+	color: #FF6600;
+/*
+	background-color: #FFFFFF;
+*/
+	text-decoration: none;
+}
+a:active {
+	color: #FF9900;
+}
+
+/* -------------------------------------------------------------------
+ float解除
+------------------------------------------------------------------- */
+
+
+/* float解除 */
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix {
+	display:inline-block;
+}
+/*\*/
+* html .clearfix {
+	zoom:100%;
+}
+.clearfix {
+	display:block;
+}
+/**/
+
+
+/* ----------------------- */
+/* レイアウト枠            */
+/* ----------------------- */
+
+*html body {  　　　　　/*IE6だけに適用*/
+   overflow-y:auto;
+}
+
+*+html body {　　　　　/*IE7だけに適用*/
+   overflow-y:auto;
+}
+
+body {
+	background-color: #CCCCCC;
+	background-image: url(../img/bg_body.gif);
+	background-position: center;
+	background-repeat: repeat-y;
+}
+
+/* 外枠 */
+div#wrap {
+	width: 660px;
+	margin: 0px auto;
+}
+
+/* 内枠 */
+div#contents{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 12px;
+	padding-right: 5px;
+}
+
+/* 左コンテンツ */
+#contents #leftbox {
+	width: 172px;
+	float: left;
+}
+
+/* 右コンテンツ */
+#contents #rightbox {
+	float: right;
+	width: 465px;
+}
+
+
+/* ----------------------- */
+/* 各パーツ                */
+/* ----------------------- */
+
+#contents h1 {
+}
+
+#contents ul.menu {
+}
+
+#contents .menu li {
+}
+
+#contents #leftbox .box {
+	background-image: url(../img/bg_box_m.gif);
+}
+
+#contents #leftbox .box .top {
+	background-image: url(../img/bg_box_t.gif);
+	background-repeat: no-repeat;
+	padding-top: 8px;
+	padding-left: 12px;
+	padding-bottom: 5px;
+}
+
+#contents #leftbox .box .bottom {
+	clear: both;
+	padding-bottom: 15px;
+	background-image: url(../img/bg_box_b.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	text-align: right;
+	padding-right: 15px;
+}
+
+#contents #leftbox .box dl {
+	padding-left: 10px;
+	padding-right: 15px;
+}
+
+#contents #leftbox .box dt {
+	width: 30px;
+	padding-bottom: 3px;
+	float: left;
+	clear: both;
+}
+
+#contents #leftbox .box dd {
+	float: right;
+	padding-bottom: 5px;
+}
+
+#contents #leftbox .box input.text {
+	width: 100px;
+}
+
+#contents #leftbox .box input.bt {
+	clear: both;
+	padding-right: 15px;
+}
+
+#contents .search {
+	height: 1.6em;
+	line-height: 1.6em;
+	clear: both;
+	padding-left: 5px;
+}
+
+#contents .search h2 {
+	float: left;
+	padding-right: 15px;
+}
+
+#contents .search dl {
+	padding-right: 15px;
+}
+
+/*
+#contents .search dt,
+#contents .search dd {
+	display: inline;
+	vertical-align: middle;
+}
+*/
+#contents .search dt {
+	font-weight: bold;
+}
+
+#contents .border hr {
+	clear: both;
+	display: none;
+}
+#contents #leftbox .box .person {
+	font-size: 110%;
+	font-weight: bold;
+	color: #000099;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+#contents #leftbox .box input {
+	font-size: 90%;
+}
+#wrap #contents #leftbox #menu {
+	padding-top: 2px;
+}
+
+#contents #rightbox #main {
+	background-image: url(../img/bg_main_m.gif);
+	background-repeat: repeat-y;
+}
+#contents #rightbox #main #main2 {
+	background-image: url(../img/bg_main_t.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#contents #rightbox #main #main2 #mainbox {
+	background-image: url(../img/bg_main_b.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-top: 15px;
+	padding-right: 10px;
+	padding-bottom: 25px;
+	padding-left: 15px;
+}
+#contents #rightbox #main #main2 h2 {
+	font-size: 115%;
+	font-weight: bold;
+	border-left-width: 3px;
+	border-left-style: solid;
+	border-left-color: #000066;
+	padding-left: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000066;
+	margin-right: 20px;
+	margin-left: 5px;
+}
+#contents #rightbox #main #main2 div.list {
+	clear: both;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+#contents #rightbox #main #main2 .list dl.products {
+	float: left;
+	width: 143px;
+	font-size: 95%;
+}
+#contents #rightbox #main #main2 #footer {
+	height: 38px;
+	clear: both;
+	background-image: url(../img/bg_foot.gif);
+	padding-right: 15px;
+}
+#contents #rightbox #main #main2 #footer .copy{
+	font-size: 75%;
+	color: #FFFFFF;
+	text-align: right;
+	margin-top: 10px;
+}
+#contents #leftbox #search dl.cat {
+	clear: both;
+}
+#contents #leftbox #search .cat dt {
+	padding-bottom: 0px;
+}
+#contents #leftbox #search .cat dd {
+	float: right;
+	line-height: 1em;
+	font-size: 85%;
+	padding: 0px;
+	width: 107px;
+	vertical-align: middle;
+}
+#contents #leftbox #search .cat input {
+}
+#contents #mainbox .list img {
+
+}
+#wrap #contents #mainbox h3 {
+	font-size: 110%;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+#wrap #contents #mainbox .text {
+	padding-left: 3px;
+	float: left;
+	width: 200px;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	font-size: 90%;
+}
+
+#wrap #contents #mainbox .photo img {
+	border: #999999 solid 1px;
+}
+
+#wrap #contents #mainbox .buy {
+	margin-top: 5px;
+	float: right;
+	padding-right: 28px;
+	line-height: 1.8em;
+}
+#wrap #contents #mainbox .list dt img {
+	border: #999999 solid 1px;
+}
+#wrap #contents #mainbox table.cartlist {
+	border: #999999 solid 1px;
+	border-bottom: none;
+	width: 94%;
+}
+
+#wrap #contents #mainbox .cartlist img {
+	border: #999999 solid 1px;
+}
+
+#wrap #contents #mainbox .cartlist td {
+	border-bottom: 1px #999999 solid;
+	padding: 5px;
+}
+
+#wrap #contents #mainbox .cartlist td.tc1 {
+	width: 15%;
+}
+#wrap #contents #mainbox .cartlist td.tc2 {
+	width: 40%;
+}
+#wrap #contents #mainbox .cartlist td.tc3 {
+	width: 20%;
+}
+#wrap #contents #mainbox .cartlist td.tc4 {
+	width: 15%;
+}
+#wrap #contents #mainbox .cartlist td.tc5 {
+	width: 10%;
+}
+
+
+#wrap #contents #mainbox .cartlist .ln1 td {
+	background-color: #F5F5F5;
+}
+
+#wrap #contents #mainbox .cartlist ln1 {
+}
+
+#wrap #contents #mainbox .fix {
+	margin-left: 330px;
+}
+
+.price {
+	border: #660000 solid 1px;
+	padding-left: 3px;
+}
+#wrap #contents #mainbox .buy strong {
+	color: #CC0000;
+}
+#contents #rightbox #main #main2 .info dl {
+	margin: 10px 0px 5px 5px;
+	width: 330px;
+	border-top: #CCCCCC solid 1px;
+}
+
+#contents #rightbox #main #main2 .info dt {
+	line-height: 1.8;
+	clear:both;
+	float: left;
+	width: 80px;
+	border-bottom: #CCCCCC solid 1px;
+	height: 1.8em;
+}
+
+#contents #rightbox #main #main2 .info dd {
+	line-height: 1.8;
+	float: right;
+	width: 250px;
+	border-bottom: #CCCCCC solid 1px;
+	height: 1.8em;
+}
+
+#contents #rightbox #main #main2 .update {
+	clear: both;
+	margin-left: 295px;
+}
+#wrap #contents #rightbox #main #main2 #mainbox .admin {
+	margin-top: 10px;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	margin-left: 10px;
+	width: 93%;
+}
+#wrap #contents #rightbox #main #main2 #mainbox .admin .tc1 {
+	width: 40%
+}
+#wrap #contents #rightbox #main #main2 #mainbox .admin .tc2 {
+	width: 30%
+}
+#wrap #contents #rightbox #main #main2 #mainbox .admin .tc3 {
+	width: 30%
+}
+#wrap #contents #rightbox #main #main2 #mainbox .admin th,
+#wrap #contents #rightbox #main #main2 #mainbox .admin td {
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	padding: 5px;
+}
